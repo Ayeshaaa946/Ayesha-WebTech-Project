@@ -1,0 +1,430 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #172033;
+    background: #f7f5f0;
+    line-height: 1.6;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 42px;
+    padding: 0 8%;
+    background: #071426;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+}
+
+nav::before {
+    content: "NEXORA";
+    margin-right: auto;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #d4af37;
+}
+
+nav a {
+    position: relative;
+    color: #f5f2e8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #d4af37;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+#home {
+    position: relative;
+    min-height: calc(100vh - 78px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 90px 10%;
+    overflow: hidden;
+    color: white;
+    background-image:
+        linear-gradient(90deg, rgba(5, 17, 34, 0.94) 0%, rgba(5, 17, 34, 0.78) 45%, rgba(5, 17, 34, 0.30) 100%),
+        url("https://images.pexels.com/photos/5444180/pexels-photo-5444180.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-size: cover;
+    background-position: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    right: -120px;
+    top: -100px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 50%;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: 130px;
+    bottom: -100px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+}
+
+#home h1 {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(70px, 9vw, 125px);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: 7px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    text-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+#home h1::first-letter {
+    color: #d4af37;
+}
+
+#home h2 {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    font-size: clamp(27px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 700;
+    color: #d4af37;
+    margin-bottom: 22px;
+}
+
+#home p {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+    font-size: 18px;
+    color: #e6e9ee;
+    margin-bottom: 35px;
+}
+.hero-buttons {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-buttons button {
+    padding: 15px 31px;
+    border: 1px solid #d4af37;
+    border-radius: 3px;
+    background: #d4af37;
+    color: #071426;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.35s;
+}
+
+.hero-buttons button:nth-child(2) {
+    background: transparent;
+    color: #ffffff;
+}
+
+.hero-buttons button:hover {
+    transform: translateY(-5px);
+    background: #f0cf63;
+    color: #071426;
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.28);
+}
+
+.hero-buttons button:nth-child(2):hover {
+    background: #ffffff;
+    color: #071426;
+}
+
+#service {
+    padding: 110px 9%;
+    background: #f7f5f0;
+}
+
+#service > h2 {
+    position: relative;
+    width: fit-content;
+    font-size: 48px;
+    color: #071426;
+    margin-bottom: 55px;
+}
+
+#service > h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+    width: 70px;
+    height: 3px;
+    background: #d4af37;
+}
+
+#service div {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    min-height: 255px;
+    margin-right: 2.5%;
+    padding: 40px 32px;
+    background: #ffffff;
+    border: 1px solid #e7dfc8;
+    border-top: 4px solid #d4af37;
+    box-shadow: 0 12px 35px rgba(7, 20, 38, 0.07);
+    transition: 0.35s;
+}
+
+#service div:last-child {
+    margin-right: 0;
+}
+
+#service div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(7, 20, 38, 0.14);
+    border-color: #d4af37;
+}
+
+#service h3 {
+    font-size: 24px;
+    color: #071426;
+    margin-bottom: 18px;
+}
+
+#service h3::before {
+    content: "◆";
+    display: block;
+    color: #d4af37;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+#service p {
+    color: #687386;
+    font-size: 16px;
+}
+
+#about {
+    position: relative;
+    padding: 115px 10%;
+    overflow: hidden;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(7, 20, 38, 0.97), rgba(7, 20, 38, 0.90)),
+        url("https://images.pexels.com/photos/8357123/pexels-photo-8357123.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-size: cover;
+    background-position: center;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    right: 8%;
+    top: 80px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    transform: rotate(45deg);
+}
+
+#about h2 {
+    position: relative;
+    font-size: 50px;
+    color: #d4af37;
+    margin-bottom: 30px;
+}
+
+#about p {
+    position: relative;
+    max-width: 760px;
+    margin-bottom: 18px;
+    font-size: 18px;
+    color: #e7ebf1;
+}
+
+#contact {
+    padding: 100px 9%;
+    background: #ffffff;
+}
+
+#contact h2 {
+    position: relative;
+    width: fit-content;
+    font-size: 48px;
+    color: #071426;
+    margin-bottom: 50px;
+}
+
+#contact h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+    width: 70px;
+    height: 3px;
+    background: #d4af37;
+}
+
+#contact p {
+    max-width: 900px;
+    padding: 20px 25px;
+    margin-bottom: 15px;
+    background: #f7f5f0;
+    border-left: 4px solid #d4af37;
+    color: #4e596b;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#contact p:hover {
+    transform: translateX(8px);
+    background: #f0ece2;
+}
+
+#contact a {
+    color: #0b527d;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #d4af37;
+}
+
+footer {
+    padding: 55px 9%;
+    background: #071426;
+    border-top: 3px solid #d4af37;
+    color: #ffffff;
+}
+
+footer h3 {
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: #d4af37;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #aeb7c5;
+    margin-top: 8px;
+}
+
+@media (max-width: 850px) {
+    nav {
+        height: auto;
+        min-height: 75px;
+        gap: 20px;
+        padding: 18px 5%;
+        flex-wrap: wrap;
+    }
+
+    nav::before {
+        width: 100%;
+        margin-right: 0;
+        text-align: left;
+    }
+
+    #home {
+        min-height: 85vh;
+        padding: 80px 7%;
+    }
+
+    #home h1 {
+        font-size: 65px;
+    }
+
+    #service {
+        padding: 80px 7%;
+    }
+
+    #service div {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #about {
+        padding: 85px 7%;
+    }
+
+    #contact {
+        padding: 80px 7%;
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    #home h1 {
+        font-size: 50px;
+        letter-spacing: 4px;
+    }
+
+    #home h2 {
+        font-size: 27px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
+
+    #home button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #service > h2,
+    #about h2,
+    #contact h2 {
+        font-size: 38px;
+    }
+}
