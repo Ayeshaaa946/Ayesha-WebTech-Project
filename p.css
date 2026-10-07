@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background-color: #f5f6fa;
+}
+
+.navbar {
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid #d6d9e0;
+}
+
+.navbar a {
+    display: inline-block;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #172554;
+    font-weight: bold;
+}
+
+#university-header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #172554;
+    color: white;
+    border-bottom: 3px solid #c9a227;
+}
+
+#admission-info {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+#admission-info h2 {
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+#admission-info p {
+    margin-bottom: 10px;
+}
+
+.move {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+#programs {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px auto;
+    width: 90%;
+}
+
+.admission-card {
+    width: 300px;
+    height: 220px;
+    padding: 30px;
+    margin: 10px;
+    border: 2px solid #c9a227;
+    background-color: white;
+    position: relative;
+}
+
+.admission-card h3 {
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+.admission-card p {
+    line-height: 1.5;
+}
+
+.apply-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #172554;
+    color: white;
+    padding: 5px 10px;
+}
+
+.apply-now {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background-color: #172554;
+    color: white;
+    border: none;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .admission-card {
+        width: 100%;
+    }
+
+    #programs {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 10px;
+    }
+}
