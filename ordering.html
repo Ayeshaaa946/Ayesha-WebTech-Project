@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie Hub | Online Food Ordering</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="ordering.css">
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#home">Foodie Hub</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbarMenu">
+<ul class="navbar-nav ms-auto align-items-lg-center">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+<li class="nav-item ms-lg-3"><a class="btn btn-brand" href="#order">Order Now</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<section id="home" class="hero">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-7">
+<p class="eyebrow">FRESH FOOD, HAPPY MOOD</p>
+<h1>Delicious Food<br>Delivered to <span>Your Door</span></h1>
+<p class="hero-text">Enjoy freshly prepared meals made with love. Explore our menu, choose your favourites, and order your food in just a few clicks.</p>
+<a href="#menu" class="btn btn-brand btn-lg me-2">Explore Menu</a>
+<a href="#order" class="btn btn-outline-brand btn-lg">Order Now</a>
+<p class="mt-4 mb-0">Fresh ingredients &bull; Great taste &bull; Happy customers</p>
+</div>
+<div class="col-lg-5 mt-4 mt-lg-0">
+<img class="hero-image" src="images/burger.jpg" alt="Freshly prepared burger served with fries" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80'">
+</div>
+</div>
+</div>
+</section>
+<section id="menu" class="section-padding">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">OUR MENU</p>
+<h2>Explore Our <span>Popular Food</span></h2>
+<p>Freshly prepared favourites at prices you'll love.</p>
+</div>
+<div class="row justify-content-center mb-4">
+<div class="col-md-7 col-lg-5">
+<label for="foodSearch" class="form-label">Search Food</label>
+<input type="search" id="foodSearch" class="form-control" placeholder="Search food by name or category">
+</div>
+</div>
+<div id="foodCards">
+<div class="food-item" data-name="burger" data-category="fast food">
+<article class="card food-card h-100">
+<img src="images/burger.jpg" class="card-img-top food-image" alt="Classic beef burger" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80'">
+<div class="card-body d-flex flex-column">
+<h3 class="card-title h5">Classic Burger</h3>
+<p class="card-text">A juicy burger with fresh lettuce, cheese, and special sauce.</p>
+<div class="mt-auto d-flex justify-content-between align-items-center"><strong class="food-price">Rs. 550</strong><button type="button" class="btn btn-brand order-food" data-food="burger">Order</button></div>
+</div>
+</article>
+</div>
+<div class="food-item" data-name="pizza" data-category="fast food">
+<article class="card food-card h-100">
+<img src="images/pizza.jpg" class="card-img-top food-image" alt="Cheese pizza with fresh toppings" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=80'">
+<div class="card-body d-flex flex-column">
+<h3 class="card-title h5">Cheese Pizza</h3>
+<p class="card-text">Cheesy pizza topped with fresh vegetables and herbs.</p>
+<div class="mt-auto d-flex justify-content-between align-items-center"><strong class="food-price">Rs. 1,200</strong><button type="button" class="btn btn-brand order-food" data-food="pizza">Order</button></div>
+</div>
+</article>
+</div>
+<div class="food-item" data-name="pasta" data-category="italian">
+<article class="card food-card h-100">
+<img src="images/pasta.jpg" class="card-img-top food-image" alt="Creamy pasta with herbs" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80'">
+<div class="card-body d-flex flex-column">
+<h3 class="card-title h5">Creamy Pasta</h3>
+<p class="card-text">Creamy pasta cooked with a rich sauce and aromatic herbs.</p>
+<div class="mt-auto d-flex justify-content-between align-items-center"><strong class="food-price">Rs. 850</strong><button type="button" class="btn btn-brand order-food" data-food="pasta">Order</button></div>
+</div>
+</article>
+</div>
+<div class="food-item" data-name="sandwich" data-category="snacks">
+<article class="card food-card h-100">
+<img src="images/sandwich.jpg" class="card-img-top food-image" alt="Fresh chicken sandwich" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80'">
+<div class="card-body d-flex flex-column">
+<h3 class="card-title h5">Chicken Sandwich</h3>
+<p class="card-text">A toasted sandwich filled with chicken, cheese, and vegetables.</p>
+<div class="mt-auto d-flex justify-content-between align-items-center"><strong class="food-price">Rs. 450</strong><button type="button" class="btn btn-brand order-food" data-food="sandwich">Order</button></div>
+</div>
+</article>
+</div>
+<div class="food-item" data-name="fries" data-category="snacks">
+<article class="card food-card h-100">
+<img src="images/fries.jpg" class="card-img-top food-image" alt="Golden crispy french fries" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=80'">
+<div class="card-body d-flex flex-column">
+<h3 class="card-title h5">Crispy Fries</h3>
+<p class="card-text">Golden, crispy potato fries served with dipping sauce.</p>
+<div class="mt-auto d-flex justify-content-between align-items-center"><strong class="food-price">Rs. 300</strong><button type="button" class="btn btn-brand order-food" data-food="fries">Order</button></div>
+</div>
+</article>
+</div>
+<div class="food-item" data-name="drink" data-category="drinks">
+<article class="card food-card h-100">
+<img src="images/drink.jpg" class="card-img-top food-image" alt="Refreshing cold drink" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?auto=format&fit=crop&w=700&q=80'">
+<div class="card-body d-flex flex-column">
+<h3 class="card-title h5">Fresh Drink</h3>
+<p class="card-text">A chilled, refreshing drink to complete your meal.</p>
+<div class="mt-auto d-flex justify-content-between align-items-center"><strong class="food-price">Rs. 200</strong><button type="button" class="btn btn-brand order-food" data-food="drink">Order</button></div>
+</div>
+</article>
+</div>
+</div>
+<p id="noResults" class="text-center mt-4 d-none">No food items found. Try another name or category.</p>
+</div>
+</section>
+<section class="offer-section section-padding">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">DEALS YOU WILL LOVE</p>
+<h2>Special <span>Offers</span></h2>
+</div>
+<div class="row g-4">
+<div class="col-md-6"><article class="offer-card h-100"><span class="offer-tag">SAVE 15%</span><h3>Family Feast</h3><p>Enjoy 15% off when your food total reaches Rs. 2,000.</p><a href="#order" class="btn btn-brand">Order Your Feast</a></article></div>
+<div class="col-md-6"><article class="offer-card offer-card-two h-100"><span class="offer-tag">SAVE Rs. 100</span><h3>Snack Time</h3><p>Get Rs. 100 off orders of Rs. 800 or more.</p><a href="#order" class="btn btn-brand">Grab the Deal</a></article></div>
+</div>
+<p class="small mt-3">Offers are promotional examples and are not applied to the order total.</p>
+</div>
+</section>
+<section id="about" class="section-padding">
+<div class="container">
+<div class="row align-items-center g-5">
+<div class="col-lg-6"><img class="about-image" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" alt="Welcoming restaurant dining area"></div>
+<div class="col-lg-6">
+<p class="eyebrow">ABOUT FOODIE HUB</p>
+<h2>Good Food Brings <span>People Together</span></h2>
+<p>Foodie Hub is a restaurant concept for people who love fresh, tasty, and affordable meals. We focus on quality ingredients, simple ordering, and friendly service.</p>
+<p>Our goal is to make ordering your favourite food easy, whether you want a quick snack or a meal to share.</p>
+<ul class="about-list"><li>Freshly prepared food</li><li>Affordable menu prices</li><li>Simple and convenient ordering</li><li>Friendly customer service</li></ul>
+<a href="#menu" class="btn btn-brand">View Our Menu</a>
+</div>
+</div>
+</div>
+</section>
+<section class="testimonial-section section-padding">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">HAPPY CUSTOMERS</p>
+<h2>What Our Customers <span>Say</span></h2>
+</div>
+<div class="row g-4">
+<div class="col-md-4"><article class="testimonial-card h-100"><p class="stars" aria-label="5 out of 5 stars">★★★★★</p><p>"The burger was delicious, and ordering was very easy."</p><h3 class="h6">Ali Ahmed</h3><span>Happy Customer</span></article></div>
+<div class="col-md-4"><article class="testimonial-card h-100"><p class="stars" aria-label="5 out of 5 stars">★★★★★</p><p>"I loved the creamy pasta. The menu has great options."</p><h3 class="h6">Sara Khan</h3><span>Happy Customer</span></article></div>
+<div class="col-md-4"><article class="testimonial-card h-100"><p class="stars" aria-label="5 out of 5 stars">★★★★★</p><p>"Affordable prices and a simple website. I would order again!"</p><h3 class="h6">Hamza Malik</h3><span>Happy Customer</span></article></div>
+</div>
+</div>
+</section>
+<section id="order" class="section-padding">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">PLACE YOUR ORDER</p>
+<h2>Order Your <span>Favourite Food</span></h2>
+<p>Enter your details, choose your food, and check your total.</p>
+</div>
+<div class="order-box">
+<div id="orderAlert" class="alert d-none" role="alert" aria-live="polite"></div>
+<form id="orderForm" class="needs-validation" novalidate>
+<div class="row g-3">
+<div class="col-md-6"><label for="customerName" class="form-label">Full Name *</label><input type="text" class="form-control" id="customerName" required minlength="2" autocomplete="name"><div class="invalid-feedback">Please enter your name.</div></div>
+<div class="col-md-6"><label for="customerEmail" class="form-label">Email Address *</label><input type="email" class="form-control" id="customerEmail" required autocomplete="email"><div class="invalid-feedback">Please enter a valid email address.</div></div>
+<div class="col-md-6"><label for="customerPhone" class="form-label">Phone Number *</label><input type="tel" class="form-control" id="customerPhone" required pattern="[0-9+\-\s()]{7,20}" autocomplete="tel"><div class="invalid-feedback">Enter a valid phone number.</div></div>
+<div class="col-md-6"><label for="customerAddress" class="form-label">Delivery Address *</label><input type="text" class="form-control" id="customerAddress" required autocomplete="street-address"><div class="invalid-feedback">Please enter your delivery address.</div></div>
+<div class="col-md-6"><label for="foodOne" class="form-label">Food Item 1</label><select class="form-select food-select" id="foodOne"><option value="">Choose food</option><option value="burger">Classic Burger - Rs. 550</option><option value="pizza">Cheese Pizza - Rs. 1,200</option><option value="pasta">Creamy Pasta - Rs. 850</option><option value="sandwich">Chicken Sandwich - Rs. 450</option><option value="fries">Crispy Fries - Rs. 300</option><option value="drink">Fresh Drink - Rs. 200</option></select></div>
+<div class="col-md-6"><label for="quantityOne" class="form-label">Quantity</label><input type="number" class="form-control food-quantity" id="quantityOne" min="1" max="99" value="1" disabled></div>
+<div class="col-md-6"><label for="foodTwo" class="form-label">Food Item 2 (Optional)</label><select class="form-select food-select" id="foodTwo"><option value="">No second item</option><option value="burger">Classic Burger - Rs. 550</option><option value="pizza">Cheese Pizza - Rs. 1,200</option><option value="pasta">Creamy Pasta - Rs. 850</option><option value="sandwich">Chicken Sandwich - Rs. 450</option><option value="fries">Crispy Fries - Rs. 300</option><option value="drink">Fresh Drink - Rs. 200</option></select></div>
+<div class="col-md-6"><label for="quantityTwo" class="form-label">Quantity</label><input type="number" class="form-control food-quantity" id="quantityTwo" min="1" max="99" value="1" disabled></div>
+<div class="col-md-6"><label for="foodThree" class="form-label">Food Item 3 (Optional)</label><select class="form-select food-select" id="foodThree"><option value="">No third item</option><option value="burger">Classic Burger - Rs. 550</option><option value="pizza">Cheese Pizza - Rs. 1,200</option><option value="pasta">Creamy Pasta - Rs. 850</option><option value="sandwich">Chicken Sandwich - Rs. 450</option><option value="fries">Crispy Fries - Rs. 300</option><option value="drink">Fresh Drink - Rs. 200</option></select></div>
+<div class="col-md-6"><label for="quantityThree" class="form-label">Quantity</label><input type="number" class="form-control food-quantity" id="quantityThree" min="1" max="99" value="1" disabled></div>
+<div class="col-12"><label for="orderNotes" class="form-label">Special Instructions (Optional)</label><textarea class="form-control" id="orderNotes" rows="3" placeholder="Any preferences for your order?"></textarea></div>
+<div class="col-12"><div class="total-box"><span>Estimated Total</span><strong id="orderTotal" aria-live="polite">Rs. 0</strong></div><p class="small mt-2 mb-0">Select at least one food item. This is a front-end demonstration; no payment is processed.</p></div>
+<div class="col-12 d-flex flex-wrap gap-2"><button type="submit" class="btn btn-brand btn-lg">Place Order</button><button type="reset" class="btn btn-outline-brand btn-lg">Reset Form</button></div>
+</div>
+</form>
+</div>
+</div>
+</section>
+<section id="contact" class="contact-section section-padding">
+<div class="container">
+<div class="section-heading">
+<p class="eyebrow">GET IN TOUCH</p>
+<h2>Contact <span>Us</span></h2>
+<p>Have a question? Send us a message.</p>
+</div>
+<div class="row g-5">
+<div class="col-lg-5"><aside class="contact-info">
+<h3>We'd Love to Hear From You</h3>
+<p>Contact us with questions about our menu or ordering process.</p>
+<p><strong>Address:</strong><br>Food Street, Islamabad, Pakistan</p>
+<p><strong>Phone:</strong><br><a href="tel:+92511234567">+92 51 1234567</a></p>
+<p><strong>Email:</strong><br><a href="mailto:hello@foodiehub.example">hello@foodiehub.example</a></p>
+<p class="small">These are demonstration contact details.</p>
+</aside></div>
+<div class="col-lg-7">
+<div id="contactAlert" class="alert d-none" role="alert" aria-live="polite"></div>
+<form id="contactForm" class="needs-validation" novalidate>
+<div class="mb-3"><label for="contactName" class="form-label">Your Name *</label><input type="text" class="form-control" id="contactName" required minlength="2" autocomplete="name"><div class="invalid-feedback">Please enter your name.</div></div>
+<div class="mb-3"><label for="contactEmail" class="form-label">Your Email *</label><input type="email" class="form-control" id="contactEmail" required autocomplete="email"><div class="invalid-feedback">Please enter a valid email address.</div></div>
+<div class="mb-3"><label for="contactMessage" class="form-label">Your Message *</label><textarea class="form-control" id="contactMessage" rows="4" required minlength="5"></textarea><div class="invalid-feedback">Enter a message of at least 5 characters.</div></div>
+<button type="submit" class="btn btn-brand">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container text-center">
+<a class="footer-brand" href="#home">Foodie Hub<span>.</span></a>
+<p>Fresh food, happy mood. Made with care for food lovers.</p>
+<div class="social-links"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></div>
+<p class="copyright mb-0">&copy; 2026 Foodie Hub. All rights reserved.</p>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="ordering.js"></script>
+</body>
+</html>
